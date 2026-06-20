@@ -1,0 +1,68 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 24px;
+    box-sizing: border-box;
+    width: 100%;
+    gap: 12px;
+    text-align: center;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                border-color 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent);
+    box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.1), 0 8px 16px -8px var(--accent-border);
+}
+
+.name {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--text-h);
+    margin: 0;
+}
+
+.potion-img {
+    height: 150px;
+    max-width: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .potion-img {
+    transform: scale(1.08);
+}
+
+.potion-description {
+    font-size: 0.9rem;
+    color: var(--text);
+    line-height: 1.5;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.potion-price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--accent);
+    background: var(--accent-bg);
+    padding: 6px 16px;
+    border-radius: 9999px;
+    margin-top: 8px;
+    width: fit-content;
+    border: 1px solid var(--accent-border);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover .potion-price {
+    background: var(--accent);
+    color: var(--bg);
+}

@@ -1,0 +1,118 @@
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 70svh;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.login-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+    max-width: 420px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.login-card:hover {
+    transform: translateY(-2px);
+}
+
+.login-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0;
+    background: linear-gradient(135deg, var(--accent), #c084fc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.login-subtitle {
+    font-size: 0.95rem;
+    color: var(--text);
+    margin: -12px 0 8px 0;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.button-group {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    justify-content: center;
+}
+
+.button-group a {
+    text-decoration: none;
+    flex: 1;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+    font-family: var(--sans);
+}
+
+.login-btn.primary {
+    background: var(--accent);
+    color: var(--bg);
+    box-shadow: 0 4px 12px var(--accent-bg);
+}
+
+.login-btn.primary:hover {
+    opacity: 0.95;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px var(--accent-border);
+}
+
+.login-btn.primary:active {
+    transform: translateY(0);
+}
+
+.login-btn.secondary {
+    background: transparent;
+    color: var(--text-h);
+    border-color: var(--border);
+}
+
+.login-btn.secondary:hover {
+    background: var(--social-bg);
+    transform: translateY(-2px);
+    border-color: var(--accent-border);
+}
+
+.login-btn.secondary:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 480px) {
+    .login-card {
+        padding: 32px 20px;
+    }
+    
+    .login-title {
+        font-size: 1.8rem;
+    }
+    
+    .button-group {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
