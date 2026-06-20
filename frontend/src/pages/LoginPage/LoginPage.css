@@ -32,10 +32,7 @@
     font-size: 2.2rem;
     font-weight: 700;
     margin: 0;
-    background: linear-gradient(135deg, var(--accent), #c084fc);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--accent);
 }
 
 .login-subtitle {
@@ -106,11 +103,11 @@
     .login-card {
         padding: 32px 20px;
     }
-    
+
     .login-title {
         font-size: 1.8rem;
     }
-    
+
     .button-group {
         flex-direction: column;
         gap: 12px;

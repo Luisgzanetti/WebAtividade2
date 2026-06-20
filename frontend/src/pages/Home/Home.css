@@ -14,7 +14,7 @@
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid var(--border);
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     flex-wrap: wrap;
     gap: 16px;
 }
@@ -23,17 +23,10 @@
     font-size: 2.5rem;
     font-weight: 700;
     margin: 0;
-    background: linear-gradient(135deg, var(--accent), #c084fc);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--accent);
 }
 
 .back-btn {
-    text-decoration: none;
-}
-
-.back-btn button {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -48,14 +41,14 @@
     font-family: var(--sans);
 }
 
-.back-btn button:hover {
+.back-btn:hover {
     color: var(--accent);
     border-color: var(--accent-border);
     background: var(--accent-bg);
     transform: translateY(-1px);
 }
 
-.back-btn button:active {
+.back-btn:active {
     transform: translateY(0);
 }
 
@@ -64,11 +57,11 @@
         padding: 24px 16px;
         gap: 20px;
     }
-    
+
     .home-title {
         font-size: 1.8rem;
     }
-    
+
     .home-header {
         justify-content: center;
         text-align: center;
