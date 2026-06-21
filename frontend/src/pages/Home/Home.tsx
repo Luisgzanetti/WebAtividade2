@@ -26,6 +26,23 @@ export default function Home() {
                 <button className="back-btn" onClick={logout}>← Sair</button>
             </header>
             <main className="home-main">
+                <section className="shop-about">
+                    <div className="shop-info">
+                        <h2 className="shop-subtitle">Desde 1867</h2>
+                        <h1 className="shop-name">Poções e Soluções</h1>
+                        <p className="shop-description">
+                            Annabelle Merigold possui uma loja de poções bem-sucedida, localizada no Beco da Última Saída, chamada <strong>“Poções e Soluções”</strong>. Nossa história começou em <strong>1867</strong> com a tradição de criar misturas mágicas da mais alta qualidade para bruxos e bruxas de todo o mundo.
+                        </p>
+                    </div>
+                    <div className="shop-gallery">
+                        <div className="gallery-card">
+                            <span className="gallery-placeholder">📷 Foto Histórica 1</span>
+                        </div>
+                        <div className="gallery-card">
+                            <span className="gallery-placeholder">📷 Foto Histórica 2</span>
+                        </div>
+                    </div>
+                </section>
                 <PotionsGrid potions={potions} />
             </main>
             <footer className="footer">
