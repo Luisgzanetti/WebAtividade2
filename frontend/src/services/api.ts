@@ -10,6 +10,7 @@ export async function getPotions() {
 
     for (const potion of data) {
         potions.push({
+            id: potion.id,
             name: potion.name,
             description: potion.description,
             photo: potion.photo,
@@ -20,3 +21,34 @@ export async function getPotions() {
     return potions;
 }
 
+export async function addPotion({ name, description, photo, price }: Omit<Potion, 'id'>) {
+    const response = await fetch(`${API_BASE_URL}/potions`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, description, photo, price }),
+    });
+
+    return response;
+}
+
+export async function editPotion(potion: Potion) {
+    const response = await fetch(`${API_BASE_URL}/potions/${potion.id}`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(potion)
+    })
+
+    return response;
+}
+
+export async function deletePotion(potion: Potion) {
+    const response = await fetch(`${API_BASE_URL}/potions/${potion.id}`, {
+        method: 'DELETE',
+    })
+
+    return response;
+}

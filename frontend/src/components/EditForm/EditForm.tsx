@@ -2,6 +2,7 @@ import { useState } from 'react';
 import type Potion from '../../interfaces/PotionInterface';
 import { useGlobal } from '../../context/GlobalContext';
 import './EditForm.css'
+import { editPotion } from '../../services/api';
 
 interface EditFormProps {
     potion: Potion;
@@ -12,6 +13,7 @@ export default function EditForm({ potion, setForm }: EditFormProps) {
     const { setPotions } = useGlobal();
 
     const [formData, setFormData] = useState<Potion>({
+        id: potion.id,
         name: potion.name,
         photo: potion.photo,
         description: potion.description,
@@ -22,11 +24,12 @@ export default function EditForm({ potion, setForm }: EditFormProps) {
         setForm(false);
     }
 
-    function salvar(e: React.FormEvent) {
+    async function salvar(e: React.FormEvent) {
         e.preventDefault();
         setPotions((prevPotions) =>
-            prevPotions.map((p) => (p.name === potion.name ? formData : p))
+            prevPotions.map((p) => (p.id === potion.id ? formData : p))
         );
+        await editPotion(formData);
         setForm(false);
     }
 

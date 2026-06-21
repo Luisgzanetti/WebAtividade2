@@ -2,15 +2,13 @@ import express from "express";
 import cors from "cors";
 import sequelize from "./db/db";
 import Potion from "./db/Tables/Potion";
+import potionRoutes from "./routes/potionRoutes";
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get('/api/potions', async (req, res) => {
-    const potions = await Potion.findAll();
-    res.json(potions);
-})
+app.use('/api/potions', potionRoutes);
 
 async function initialize() {
     try {
