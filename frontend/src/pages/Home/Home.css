@@ -67,3 +67,27 @@
         text-align: center;
     }
 }
+
+.home-main {
+    border-bottom: 1px solid var(--border);
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.footer-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.info-line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
