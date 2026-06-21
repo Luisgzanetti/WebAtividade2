@@ -2,6 +2,7 @@ import './App.css'
 import { createBrowserRouter, RouterProvider } from 'react-router'
 import LoginPage from './pages/LoginPage/LoginPage'
 import Home from './pages/Home/Home'
+import AdminPage from './pages/AdminPage/AdminPage'
 import { GlobalProvider } from './context/GlobalContext'
 
 const router = createBrowserRouter([
@@ -12,6 +13,10 @@ const router = createBrowserRouter([
   {
     path: '/Home',
     element: <Home />
+  },
+  {
+    path: '/Admin',
+    element: <AdminPage />
   }
 ])
 

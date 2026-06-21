@@ -8,7 +8,7 @@ export default function PotionCard(potion: Potion) {
             <p className="name">{potion.name}</p>
             <img src={potion.photo} alt={potion.name} className="potion-img"></img>
             <p className="potion-description">{potion.description}</p>
-            <p className="potion-price">{potion.price}</p>
+            <p className="potion-price">Comprar: {potion.price}</p>
         </div>
     )
 }

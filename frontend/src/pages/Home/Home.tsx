@@ -1,5 +1,5 @@
 import { useGlobal } from "../../context/GlobalContext"
-import { Link, Navigate, useNavigate } from "react-router"
+import { Navigate, useNavigate } from "react-router"
 import PotionsGrid from "../../components/PotionsGrid/PotionsGrid"
 import "./Home.css"
 
@@ -9,7 +9,7 @@ export default function Home() {
     const navigate = useNavigate()
 
     if (user != 'user') {
-        navigate('/', { replace: true });
+        return <Navigate to="/" replace />
     }
 
     function logout() {
